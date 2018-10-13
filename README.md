@@ -1,2 +1,3 @@
 # dailyui
-Common utilities derived from my Daily UI challenge
+
+Common utilities derived from the Daily UI challenge - https://codepen.io/minutofrontend/
