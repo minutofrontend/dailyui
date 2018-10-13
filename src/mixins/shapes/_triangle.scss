@@ -1,0 +1,28 @@
+@mixin triangle($size, $color, $direction: 'top left') {
+  height: 0;
+  width: 0;
+  
+  @if $direction == 'top left' or $direction == 'top right' {
+    border-top: $size solid $color;
+  }
+  
+  @if $direction == 'bottom left' or $direction == 'bottom right' {
+    border-bottom: $size solid $color;
+  }
+  
+  @if $direction == 'bottom left' {
+    border-right: $size solid transparent;
+  }
+  
+  @if $direction == 'bottom right' {
+    border-left: $size solid transparent;
+  }
+  
+  @if $direction == 'top left' {
+    border-right: $size solid transparent;
+  }
+  
+  @if $direction == 'top right' {
+    border-left: $size solid transparent;
+  }
+}

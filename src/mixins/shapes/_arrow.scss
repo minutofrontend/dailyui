@@ -1,0 +1,30 @@
+@mixin arrow($size, $color, $direction: 'left') {
+  height: 0;
+  width: 0;
+  
+  @if $direction == 'up' or $direction == 'down' {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  }
+  
+  @if $direction == 'left' or $direction == 'right' {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+  }
+  
+  @if $direction == 'down' {
+    border-top: $size solid $color;
+  }
+  
+  @if $direction == 'up' {
+    border-bottom: $size solid $color;
+  }
+  
+  @if $direction == 'left' {
+    border-right: $size solid $color;
+  }
+  
+  @if $direction == 'right' {
+    border-left: $size solid $color;
+  }
+}

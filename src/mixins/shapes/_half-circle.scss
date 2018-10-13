@@ -1,0 +1,27 @@
+@mixin halfCircle($size, $direction: 'left') {
+  @if $direction == 'down' or $direction == 'up' {
+    height: $size / 2;
+    width: $size
+  }
+  
+  @if $direction == 'left' or $direction == 'right' {
+    height: $size;
+    width: $size / 2;
+  }
+  
+  @if $direction == 'down' or $direction == 'right' {
+    border-top-left-radius: $size;
+  }
+  
+  @if $direction == 'down' or $direction == 'left' {
+    border-top-right-radius: $size;
+  }
+  
+  @if $direction == 'up' or $direction == 'right' {
+    border-bottom-left-radius: $size;
+  }
+  
+  @if $direction == 'up' or $direction == 'left' {
+    border-bottom-right-radius: $size;
+  }
+}
